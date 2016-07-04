@@ -51,6 +51,13 @@ TouchScreen::TouchScreen(QWidget *parent) :
     timer = new QTimer(this);
     connect(timer, SIGNAL(timeout()),mainSystem,SLOT(updateSystemState()));
     timer->start(1000);
+
+    //camera and viewfinder
+    connect(ui->tabWidget,SIGNAL(currentChanged(int)),this,SLOT(tabTest()));
+    cam = new camera(ui->viewfinder);
+    if (ui->tabWidget->currentIndex() == 1 ){
+        cam->start();
+    }
 }
 
 TouchScreen::~TouchScreen()
@@ -128,4 +135,14 @@ void TouchScreen::updateWavelength(float wavelength){
     ui->wavelengthDb->setValue(wavelength);
 }
 
+void TouchScreen::tabTest(){
+    qDebug() << ui->tabWidget->currentIndex();
+
+    if (ui->tabWidget->currentIndex() == 1 ){
+        cam->start();
+    }
+    else{
+        cam->stop();
+    }
+}
 

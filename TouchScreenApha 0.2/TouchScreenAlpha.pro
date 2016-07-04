@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui serialport
+QT       += core gui serialport multimediawidgets
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -18,13 +18,15 @@ SOURCES += main.cpp\
     touchscreen.cpp \
     edfa.cpp \
     laser.cpp \
-    lasersystem.cpp
+    lasersystem.cpp \
+    camera.cpp
 
 HEADERS  += \
     touchscreen.h \
     edfa.h \
     laser.h \
-    lasersystem.h
+    lasersystem.h \
+    camera.h
 
 FORMS    += \
     touchscreen.ui

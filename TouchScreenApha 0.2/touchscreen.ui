@@ -73,8 +73,14 @@
      <bold>true</bold>
     </font>
    </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
    <property name="styleSheet">
-    <string notr="true">QTabBar::tab { height: 70px; width: 400px; }</string>
+    <string notr="true">QTabBar::tab { height: 70px; width: 266px; }</string>
    </property>
    <property name="tabShape">
     <enum>QTabWidget::Rounded</enum>
@@ -519,6 +525,21 @@ background-repeat: none;
     <zorder>StableOff</zorder>
     <zorder>LaserPortOff</zorder>
    </widget>
+   <widget class="QWidget" name="tab_3">
+    <attribute name="title">
+     <string>Camera</string>
+    </attribute>
+    <widget class="QCameraViewfinder" name="viewfinder" native="true">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>10</y>
+       <width>741</width>
+       <height>381</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
    <widget class="QWidget" name="tab_2">
     <property name="autoFillBackground">
      <bool>true</bool>
@@ -711,6 +732,14 @@ background-repeat: none;
    </widget>
   </widget>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QCameraViewfinder</class>
+   <extends>QWidget</extends>
+   <header>qcameraviewfinder.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>

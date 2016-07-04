@@ -3,7 +3,9 @@
 
 #include <QDialog>
 #include "lasersystem.h"
+#include "camera.h"
 #include <QTimer>
+
 
 namespace Ui {
 class TouchScreen;
@@ -25,6 +27,7 @@ private slots:
     void updatePower(float power);
     void updateWavelength(float wavelength);
     void setNewWavelength();
+    void tabTest();
 
 public:
     explicit TouchScreen(QWidget *parent = 0);
@@ -39,7 +42,7 @@ private:
 
     QTimer *wavelengthTimer;
     QTimer *timer;
-
+    camera *cam;
 
      quint16 prevWavelength;
 
