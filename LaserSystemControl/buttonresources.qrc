@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/MyFiles">
+        <file>Graphics/Green.png</file>
+        <file>Graphics/PowerOff.gif</file>
+        <file>Graphics/PowerOn.gif</file>
+        <file>Graphics/Red.png</file>
+        <file>Graphics/Save.gif</file>
+    </qresource>
+</RCC>
